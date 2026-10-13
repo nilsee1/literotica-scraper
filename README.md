@@ -66,12 +66,57 @@ Ein vollständiges, lokal lauffähiges Python-Tool mit moderner Web-Oberfläche 
 
 ---
 
-## 🚀 Lokale Installation & Start
+## 🚀 Installation & Start (Empfohlen: Docker Compose)
 
-### 1. Repository / Verzeichnis öffnen
-Wechsle in das Projektverzeichnis:
+Die einfachste, schnellste und **empfohlene Methode**, die Anwendung lokal oder auf einem Server zu betreiben. Es muss kein Python und keine Abhängigkeiten manuell eingerichtet werden.
+
+### Variante A: Mit vorkonfiguriertem Docker-Image (Schnellste Methode)
+Auf deinem Server benötigst du lediglich eine [`docker-compose.yml`](docker-compose.yml):
+
+```yaml
+services:
+  literotica-scraper:
+    image: ghcr.io/nilsee1/literotica-epub-scraper:latest
+    container_name: literotica-epub-scraper
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+```
+
+Starte und aktualisiere den Container einfach mit:
 ```bash
-cd /pfad/zu/deinem/scraper
+# Neuestes Image herunterladen & starten
+docker compose pull
+docker compose up -d
+```
+
+### Variante B: Aus dem geklonten Repository starten
+```bash
+git clone https://github.com/nilsee1/literotica-epub-scraper.git
+cd literotica-epub-scraper
+
+# Container im Hintergrund bauen und starten
+docker compose up -d --build
+```
+
+### Nützliche Docker-Befehle:
+* **Status prüfen:** `docker compose ps`
+* **Live-Logs einsehen:** `docker compose logs -f`
+* **Stoppen:** `docker compose down`
+* **Auf neueste Version aktualisieren:** `docker compose pull && docker compose up -d`
+
+Nach dem Start ist die Web-Oberfläche erreichbar unter: **http://localhost:8000** bzw. **http://<server-ip>:8000**.
+
+---
+
+## 🛠️ Alternative: Lokale Python-Installation (für Entwicklung)
+
+Falls du das Projekt ohne Docker direkt in einer Python-Umgebung ausführen möchtest:
+
+### 1. Repository klonen & öffnen
+```bash
+git clone https://github.com/nilsee1/literotica-epub-scraper.git
+cd literotica-epub-scraper
 ```
 
 ### 2. Virtuelle Umgebung erstellen und aktivieren
@@ -94,36 +139,10 @@ pip install -r requirements.txt
 ```
 
 ### 4. Anwendung starten
-Starte den Uvicorn-Server:
 ```bash
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
-
-### 5. Web-Oberfläche im Browser öffnen
-Öffne folgende URL in deinem Browser:
-```
-http://127.0.0.1:8000
-```
-
----
-
-## 🐳 Alternativ: Starten mit Docker Compose
-
-Wer die Anwendung containerisiert auf einem lokalen Rechner oder Server betreiben möchte:
-
-```bash
-# Container im Hintergrund bauen und starten
-docker compose up -d --build
-
-# Status & Logs prüfen
-docker compose ps
-docker compose logs -f
-
-# Beenden
-docker compose down
-```
-
-Danach erreichbar unter: `http://localhost:8000` bzw. `http://<server-ip>:8000`.
+Öffne anschließend **http://127.0.0.1:8000** im Browser.
 
 ---
 
