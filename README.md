@@ -1,11 +1,10 @@
-
-
-
-
 # Literotica to EPUB Scraper & Generator
-100% Vibe Coded!!!
-USE AT OWN RISK
 
+> [!IMPORTANT]
+> **Disclaimer:**  
+> Dieses Tool ist ein reines **Privatprojekt** zu privaten Archivierungs- und Lernzwecken.  
+> Das **Urheberrecht (Copyright)** der jeweiligen Autoren und Plattformen muss stets zwingend beachtet werden! Die Erstellung von E-Books ist ausschließlich für den privaten, persönlichen Gebrauch bestimmt. Das Weiterverbreiten, Veröffentlichen oder die kommerzielle Nutzung fremder Werke ohne ausdrückliche Genehmigung der jeweiligen Urheber ist unzulässig. Die Verantwortung für die rechtmäßige Nutzung des Tools liegt vollumfänglich beim Nutzer.  
+> *(100% Vibe Coded – USE AT OWN RISK)*
 
 Ein vollständiges, lokal lauffähiges Python-Tool mit moderner Web-Oberfläche zum Extrahieren, Formatieren und Bündeln von Geschichten von [german.literotica.com](https://german.literotica.com) (und allgemeinen Literotica-Seiten) als standardkonforme `.epub`-E-Books.
 
