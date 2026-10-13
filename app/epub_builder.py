@@ -21,12 +21,22 @@ logger = logging.getLogger("epub_builder")
 EPUB_STYLESHEET = """
 @charset "utf-8";
 
+@page {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 body {
     font-family: "Georgia", "Cambria", "Times New Roman", serif;
     font-size: 1.05em;
     line-height: 1.65;
     color: #1a1a1a;
-    margin: 5% 7%;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
 }
 
