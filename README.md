@@ -100,6 +100,26 @@ http://127.0.0.1:8000
 
 ---
 
+## 🐳 Alternativ: Starten mit Docker Compose
+
+Wer die Anwendung containerisiert auf einem lokalen Rechner oder Server betreiben möchte:
+
+```bash
+# Container im Hintergrund bauen und starten
+docker compose up -d --build
+
+# Status & Logs prüfen
+docker compose ps
+docker compose logs -f
+
+# Beenden
+docker compose down
+```
+
+Danach erreichbar unter: `http://localhost:8000` bzw. `http://<server-ip>:8000`.
+
+---
+
 ## 📖 Bedienung
 
 1. **Buchtitel (optional):** Standardmäßig ist ein Titel mit dem heutigen Datum vorausgefüllt (wird bei Serien-Links automatisch durch den Namen der Serie ersetzt).
