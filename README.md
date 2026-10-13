@@ -1,5 +1,10 @@
-# Literotica to EPUB Scraper & Generator
 
+
+
+
+# Literotica to EPUB Scraper & Generator
+100% Vibe Coded!!!
+USE AT OWN RISK
 Ein vollständiges, lokal lauffähiges Python-Tool mit moderner Web-Oberfläche zum Extrahieren, Formatieren und Bündeln von Geschichten von [german.literotica.com](https://german.literotica.com) (und allgemeinen Literotica-Seiten) als standardkonforme `.epub`-E-Books.
 
 ---
