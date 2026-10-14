@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="h-full bg-slate-50">
+<html lang="de" class="h-full bg-[#0a1128]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,23 @@
             theme: {
                 extend: {
                     colors: {
+                        navy: {
+                            950: '#070d1e',
+                            900: '#0b132b',
+                            850: '#0f1b3d',
+                            800: '#14224d',
+                            700: '#1c2f66',
+                            600: '#253d85',
+                        },
                         brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            200: '#c7d2fe',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            800: '#3730a3',
-                            900: '#312e81',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     }
                 }
@@ -27,25 +35,25 @@
         }
     </script>
 </head>
-<body class="min-h-full flex flex-col font-sans text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+<body class="min-h-full flex flex-col font-sans bg-[#0a1128] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
+    <header class="bg-[#0f1b3d]/90 backdrop-blur-md border-b border-blue-900/50 sticky top-0 z-20 shadow-lg shadow-black/20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold tracking-tight text-slate-900">Literotica <span class="text-brand-600">to EPUB</span></h1>
-                    <p class="text-xs text-slate-500">Multi-Page E-Book Scraper &amp; Generator</p>
+                    <h1 class="text-xl font-bold tracking-tight text-white">Literotica <span class="text-blue-400">to EPUB</span></h1>
+                    <p class="text-xs text-slate-400">Multi-Page E-Book Scraper &amp; Generator</p>
                 </div>
             </div>
             <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/70 text-emerald-300 border border-emerald-800/60 shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     Bereit
                 </span>
             </div>
@@ -56,28 +64,28 @@
     <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 py-8">
         
         <!-- Intro Banner -->
-        <div class="mb-8 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-lg shadow-indigo-950/10">
+        <div class="mb-8 bg-gradient-to-r from-[#14224d] via-[#1c2f66] to-[#14224d] border border-blue-800/40 rounded-2xl p-6 sm:p-8 text-white shadow-xl shadow-black/30">
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-200 border border-brand-500/30 mb-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-200 border border-blue-400/30 mb-4">
                     ✨ Automatische Mehrseiten-Zusammenführung
                 </div>
-                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-white">
                     Lies deine Lieblingsgeschichten überall offline als E-Book.
                 </h2>
-                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                    Füge Links von <code class="bg-white/10 px-1.5 py-0.5 rounded text-white font-mono text-xs">german.literotica.com</code> ein. Das Tool erkennt mehrteilige Seiten automatisch, filtert störende Elemente heraus und erzeugt eine formatierte <span class="text-indigo-300 font-medium">.epub</span>-Datei mit Inhaltsverzeichnis.
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+                    Füge Links von <code class="bg-[#0b132b] border border-blue-800/60 px-1.5 py-0.5 rounded text-blue-200 font-mono text-xs">german.literotica.com</code> ein. Das Tool erkennt mehrteilige Seiten automatisch, filtert störende Elemente heraus und erzeugt eine formatierte <span class="text-blue-300 font-medium">.epub</span>-Datei mit Inhaltsverzeichnis.
                 </p>
             </div>
         </div>
 
         <!-- Form Card -->
-        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+        <div class="bg-[#0f1b3d] rounded-2xl border border-blue-900/50 shadow-xl shadow-black/25 p-6 sm:p-8">
             <form id="generator-form" class="space-y-6">
 
                 <!-- Grid für Buchtitel, Autor & Jahr -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
                     <div class="md:col-span-5">
-                        <label for="book_title" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                        <label for="book_title" class="block text-sm font-semibold text-slate-200 mb-1.5">
                             Buchtitel
                         </label>
                         <input 
@@ -86,13 +94,13 @@
                             name="book_title" 
                             value="{{ default_title }}"
                             placeholder="z. B. Hannah - Familiensklavin"
-                            class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition shadow-sm text-sm"
+                            class="w-full px-4 py-2.5 rounded-xl border border-blue-900/60 bg-[#0b132b] text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-inner text-sm"
                         >
                         <p class="mt-1 text-xs text-slate-400">Haupttitel (wird bei Serien-Links automatisch befüllt).</p>
                     </div>
 
                     <div class="md:col-span-4">
-                        <label for="book_author" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                        <label for="book_author" class="block text-sm font-semibold text-slate-200 mb-1.5">
                             Buch-Autor / Herausgeber <span class="text-xs font-normal text-slate-400">(optional)</span>
                         </label>
                         <input 
@@ -100,13 +108,13 @@
                             id="book_author" 
                             name="book_author" 
                             placeholder="z. B. famfick oder Dein Name"
-                            class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition shadow-sm text-sm"
+                            class="w-full px-4 py-2.5 rounded-xl border border-blue-900/60 bg-[#0b132b] text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-inner text-sm"
                         >
                         <p class="mt-1 text-xs text-slate-400">Wird für Dateiname &amp; Metadaten verwendet.</p>
                     </div>
 
                     <div class="md:col-span-3">
-                        <label for="book_year" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                        <label for="book_year" class="block text-sm font-semibold text-slate-200 mb-1.5">
                             Jahr <span class="text-xs font-normal text-slate-400">(optional)</span>
                         </label>
                         <input 
@@ -117,47 +125,47 @@
                             placeholder="{{ default_year }}"
                             min="1900"
                             max="2100"
-                            class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition shadow-sm text-sm"
+                            class="w-full px-4 py-2.5 rounded-xl border border-blue-900/60 bg-[#0b132b] text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-inner text-sm"
                         >
                         <p class="mt-1 text-xs text-slate-400">Leer = aktuelles Jahr ({{ default_year }}).</p>
                     </div>
                 </div>
 
                 <!-- Dateinamens-Hinweis -->
-                <div class="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 border border-slate-200/80 rounded-xl px-3.5 py-2">
-                    <svg class="w-4 h-4 text-brand-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="flex items-center gap-2 text-xs text-slate-300 bg-[#0b132b]/80 border border-blue-900/40 rounded-xl px-3.5 py-2">
+                    <svg class="w-4 h-4 text-blue-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Format des Datei-Downloads: <code class="font-mono font-semibold text-slate-700 bg-white px-1.5 py-0.5 rounded border border-slate-200">Autor - Titel.epub</code></span>
+                    <span>Format des Datei-Downloads: <code class="font-mono font-semibold text-blue-200 bg-[#14224d] px-1.5 py-0.5 rounded border border-blue-800/50">Autor - Titel.epub</code></span>
                 </div>
 
                 <!-- Story-URLs Textarea -->
                 <div>
                     <div class="flex items-center justify-between mb-1.5">
-                        <label for="urls" class="block text-sm font-semibold text-slate-700">
-                            Story- oder Serien-URLs <span class="text-rose-500">*</span>
+                        <label for="urls" class="block text-sm font-semibold text-slate-200">
+                            Story- oder Serien-URLs <span class="text-rose-400">*</span>
                         </label>
                         <div class="flex items-center space-x-2 text-xs">
                             <button 
                                 type="button" 
                                 id="btn-insert-series" 
-                                class="text-brand-600 hover:text-brand-800 font-medium transition hover:underline"
+                                class="text-blue-400 hover:text-blue-300 font-medium transition hover:underline"
                             >
                                 + Serie einfügen
                             </button>
-                            <span class="text-slate-300">|</span>
+                            <span class="text-blue-900">|</span>
                             <button 
                                 type="button" 
                                 id="btn-insert-sample" 
-                                class="text-slate-600 hover:text-slate-800 font-medium transition hover:underline"
+                                class="text-slate-300 hover:text-white font-medium transition hover:underline"
                             >
                                 + Einzel-Story
                             </button>
-                            <span class="text-slate-300">|</span>
+                            <span class="text-blue-900">|</span>
                             <button 
                                 type="button" 
                                 id="btn-clear-urls" 
-                                class="text-slate-400 hover:text-slate-600 transition hover:underline"
+                                class="text-slate-400 hover:text-slate-200 transition hover:underline"
                             >
                                 Leeren
                             </button>
@@ -171,63 +179,63 @@
                             rows="6" 
                             required
                             placeholder="https://www.literotica.com/series/se/hannah-familiensklavin&#10;https://german.literotica.com/s/geheimnisvolle-krafte-01&#10;(Eine URL pro Zeile – Serien- &amp; Story-Links werden unterstützt)"
-                            class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-slate-50/50 text-slate-800 placeholder-slate-400 font-mono text-xs sm:text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 focus:bg-white transition shadow-sm"
+                            class="w-full px-4 py-3 rounded-xl border border-blue-900/60 bg-[#0b132b] text-slate-100 placeholder-slate-500 font-mono text-xs sm:text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition shadow-inner"
                         ></textarea>
                     </div>
                     
                     <div class="mt-1.5 flex items-center justify-between text-xs text-slate-400">
                         <span>Serien-Links (z.&nbsp;B. /series/se/...) werden automatisch in alle zugehörigen Kapitel aufgelöst.</span>
-                        <span id="url-counter" class="font-medium text-slate-500">0 URLs erkannt</span>
+                        <span id="url-counter" class="font-medium text-slate-300">0 URLs erkannt</span>
                     </div>
                 </div>
 
                 <!-- Error Alert Box -->
-                <div id="error-box" class="hidden rounded-xl bg-rose-50 border border-rose-200 p-4 text-rose-800 text-sm flex items-start gap-3">
-                    <svg class="w-5 h-5 text-rose-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div id="error-box" class="hidden rounded-xl bg-rose-950/50 border border-rose-800/60 p-4 text-rose-200 text-sm flex items-start gap-3">
+                    <svg class="w-5 h-5 text-rose-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div class="flex-grow">
-                        <p class="font-semibold" id="error-title">Fehler</p>
-                        <p class="text-xs mt-0.5 text-rose-700" id="error-message"></p>
+                        <p class="font-semibold text-rose-200" id="error-title">Fehler</p>
+                        <p class="text-xs mt-0.5 text-rose-300" id="error-message"></p>
                     </div>
                 </div>
 
                 <!-- Progress / Loading Indicator Area -->
-                <div id="loading-box" class="hidden rounded-xl bg-indigo-50/70 border border-indigo-100 p-5 space-y-3">
+                <div id="loading-box" class="hidden rounded-xl bg-[#14224d]/80 border border-blue-800/60 p-5 space-y-3">
                     <div class="flex items-center justify-between text-sm">
                         <div class="flex items-center space-x-2.5">
-                            <svg class="animate-spin h-5 w-5 text-brand-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <svg class="animate-spin h-5 w-5 text-blue-400 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                             </svg>
-                            <span class="font-semibold text-slate-800" id="loading-status">Verarbeite Anfrage...</span>
+                            <span class="font-semibold text-slate-100" id="loading-status">Verarbeite Anfrage...</span>
                         </div>
-                        <span class="text-xs font-mono text-slate-500" id="loading-timer">00:00</span>
+                        <span class="text-xs font-mono text-slate-400" id="loading-timer">00:00</span>
                     </div>
 
                     <!-- Progress bar -->
-                    <div class="w-full bg-slate-200/80 rounded-full h-2 overflow-hidden">
-                        <div id="progress-bar" class="bg-gradient-to-r from-brand-600 to-indigo-500 h-2 rounded-full w-0 transition-all duration-300"></div>
+                    <div class="w-full bg-[#0b132b] rounded-full h-2.5 overflow-hidden border border-blue-900/50">
+                        <div id="progress-bar" class="bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-400 h-2.5 rounded-full w-0 transition-all duration-300"></div>
                     </div>
 
-                    <p class="text-xs text-slate-500 italic">
+                    <p class="text-xs text-slate-400 italic">
                         ⚡ Mehrseitige Geschichten werden parallel abgerufen und zu sauberen Kapiteln zusammengefügt. Bitte kurz warten...
                     </p>
                 </div>
 
                 <!-- Success Box -->
-                <div id="success-box" class="hidden rounded-xl bg-emerald-50 border border-emerald-200 p-4 text-emerald-900 text-sm space-y-2">
-                    <div class="flex items-center gap-2 font-semibold text-emerald-800">
-                        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div id="success-box" class="hidden rounded-xl bg-emerald-950/60 border border-emerald-800/70 p-4 text-emerald-200 text-sm space-y-2">
+                    <div class="flex items-center gap-2 font-semibold text-emerald-300">
+                        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>EPUB erfolgreich erstellt!</span>
                     </div>
-                    <p class="text-xs text-emerald-700" id="success-message">
+                    <p class="text-xs text-emerald-200/90" id="success-message">
                         Der Download deiner .epub-Datei wurde im Browser gestartet.
                     </p>
                     <div class="pt-1">
-                        <a id="btn-manual-download" href="#" download class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-100 hover:bg-emerald-200 px-3 py-1.5 rounded-lg transition">
+                        <a id="btn-manual-download" href="#" download class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-200 bg-emerald-900/70 hover:bg-emerald-800/80 border border-emerald-700/60 px-3 py-1.5 rounded-lg transition">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
@@ -241,7 +249,7 @@
                     <button 
                         type="submit" 
                         id="btn-submit"
-                        class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-semibold text-sm sm:text-base shadow-md shadow-brand-500/25 hover:shadow-lg hover:shadow-brand-500/35 transition flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                        class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-black/40 hover:shadow-blue-900/30 transition flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                     >
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -254,25 +262,25 @@
         </div>
 
         <!-- Info Features Cards -->
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 text-slate-600">
-            <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-xs">
-                <div class="w-8 h-8 rounded-lg bg-indigo-50 text-brand-600 flex items-center justify-center font-bold text-sm mb-3">1</div>
-                <h3 class="font-semibold text-slate-900 text-sm mb-1">Mehrseiten-Erkennung</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 text-slate-300">
+            <div class="bg-[#0f1b3d] p-5 rounded-xl border border-blue-900/40 shadow-md">
+                <div class="w-8 h-8 rounded-lg bg-[#14224d] text-blue-400 border border-blue-800/50 flex items-center justify-center font-bold text-sm mb-3">1</div>
+                <h3 class="font-semibold text-white text-sm mb-1">Mehrseiten-Erkennung</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
                     Egal ob 1 oder 25 Seiten: Literoticas Unterseiten werden automatisch ermittelt und nahtlos zusammengefügt.
                 </p>
             </div>
-            <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-xs">
-                <div class="w-8 h-8 rounded-lg bg-indigo-50 text-brand-600 flex items-center justify-center font-bold text-sm mb-3">2</div>
-                <h3 class="font-semibold text-slate-900 text-sm mb-1">Saubere Formatierung</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">
+            <div class="bg-[#0f1b3d] p-5 rounded-xl border border-blue-900/40 shadow-md">
+                <div class="w-8 h-8 rounded-lg bg-[#14224d] text-blue-400 border border-blue-800/50 flex items-center justify-center font-bold text-sm mb-3">2</div>
+                <h3 class="font-semibold text-white text-sm mb-1">Saubere Formatierung</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
                     Filtert Werbung, Skripte, Paginierungs-Schaltflächen und Kommentare vollständig heraus.
                 </p>
             </div>
-            <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-xs">
-                <div class="w-8 h-8 rounded-lg bg-indigo-50 text-brand-600 flex items-center justify-center font-bold text-sm mb-3">3</div>
-                <h3 class="font-semibold text-slate-900 text-sm mb-1">Standard EPUB3</h3>
-                <p class="text-xs text-slate-500 leading-relaxed">
+            <div class="bg-[#0f1b3d] p-5 rounded-xl border border-blue-900/40 shadow-md">
+                <div class="w-8 h-8 rounded-lg bg-[#14224d] text-blue-400 border border-blue-800/50 flex items-center justify-center font-bold text-sm mb-3">3</div>
+                <h3 class="font-semibold text-white text-sm mb-1">Standard EPUB3</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
                     Mit Navigationsleiste, vollständigem Inhaltsverzeichnis (TOC) und Metadaten für Kindle, Tolino und Apple Books.
                 </p>
             </div>
@@ -281,7 +289,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-auto border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    <footer class="mt-auto border-t border-blue-900/40 bg-[#0b132b] py-6 text-center text-xs text-slate-500">
         <p>Literotica to EPUB Scraper &bull; Lokal lauffähiges Python-Projekt mit FastAPI &amp; ebooklib</p>
     </footer>
 
@@ -530,4 +538,3 @@
     </script>
 </body>
 </html>
-
