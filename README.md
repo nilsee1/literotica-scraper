@@ -91,8 +91,8 @@ docker compose up -d
 
 ### Variante B: Aus dem geklonten Repository starten
 ```bash
-git clone https://github.com/nilsee1/literotica-epub-scraper.git
-cd literotica-epub-scraper
+git clone https://codeberg.org/nilsee/literotica-scraper.git
+cd literotica-scraper
 
 # Container im Hintergrund bauen und starten
 docker compose up -d --build
@@ -114,8 +114,8 @@ Falls du das Projekt ohne Docker direkt in einer Python-Umgebung ausführen möc
 
 ### 1. Repository klonen & öffnen
 ```bash
-git clone https://github.com/nilsee1/literotica-epub-scraper.git
-cd literotica-epub-scraper
+git clone https://codeberg.org/nilsee/literotica-scraper.git
+cd literotica-scraper
 ```
 
 ### 2. Virtuelle Umgebung erstellen und aktivieren
