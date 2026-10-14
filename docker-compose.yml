@@ -1,8 +1,8 @@
 services:
   literotica-scraper:
-    image: ghcr.io/nilsee1/literotica-epub-scraper:latest
+    image: codeberg.org/nilsee/literotica-scraper:latest
     build: .
-    container_name: literotica-epub-scraper
+    container_name: literotica-scraper
     restart: unless-stopped
     ports:
       - "8000:8000"

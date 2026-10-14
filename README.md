@@ -75,8 +75,8 @@ Auf deinem Server benötigst du lediglich eine [`docker-compose.yml`](docker-com
 ```yaml
 services:
   literotica-scraper:
-    image: ghcr.io/nilsee1/literotica-epub-scraper:latest
-    container_name: literotica-epub-scraper
+    image: codeberg.org/nilsee/literotica-scraper:latest
+    container_name: literotica-scraper
     restart: unless-stopped
     ports:
       - "8000:8000"
@@ -84,7 +84,7 @@ services:
 
 Starte und aktualisiere den Container einfach mit:
 ```bash
-# Neuestes Image herunterladen & starten
+# Neuestes Image von Codeberg herunterladen & starten
 docker compose pull
 docker compose up -d
 ```
@@ -97,6 +97,21 @@ cd literotica-scraper
 # Container im Hintergrund bauen und starten
 docker compose up -d --build
 ```
+
+### 📦 Image auf Codeberg bereitstellen / aktualisieren
+Um das Docker-Image für `docker compose pull` auf externen Servern bereitzustellen:
+
+1. **Einmalig bei der Codeberg Registry anmelden:**
+   *(Benötigt ein Personal Access Token unter Codeberg > Einstellungen > Anwendungen mit `write:package`-Berechtigung)*
+   ```bash
+   docker login codeberg.org
+   ```
+
+2. **Image bauen und zu Codeberg pushen:**
+   ```bash
+   docker compose build
+   docker compose push
+   ```
 
 ### Nützliche Docker-Befehle:
 * **Status prüfen:** `docker compose ps`
