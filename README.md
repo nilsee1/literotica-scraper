@@ -75,7 +75,7 @@ Auf deinem Server benötigst du lediglich eine [`docker-compose.yml`](docker-com
 ```yaml
 services:
   literotica-scraper:
-    image: ghcr.io/nilsee/literotica-scraper:latest
+    image: ghcr.io/nilsee1/literotica-scraper:latest
     container_name: literotica-scraper
     restart: unless-stopped
     ports:
@@ -91,7 +91,7 @@ docker compose up -d
 
 ### Variante B: Aus dem geklonten Repository starten
 ```bash
-git clone https://github.com/nilsee/literotica-scraper.git
+git clone https://github.com/nilsee1/literotica-scraper.git
 cd literotica-scraper
 
 # Container im Hintergrund bauen und starten
@@ -104,7 +104,7 @@ Um das Docker-Image für `docker compose pull` auf externen Servern bereitzustel
 1. **Einmalig bei GitHub Packages / GHCR anmelden:**
    *(Benötigt ein Personal Access Token (classic) unter GitHub > Settings > Developer settings > Personal access tokens mit `write:packages`-Berechtigung)*
    ```bash
-   echo $CR_PAT | docker login ghcr.io -u nilsee --password-stdin
+   echo $CR_PAT | docker login ghcr.io -u nilsee1 --password-stdin
    ```
 
 2. **Image bauen und zu GHCR pushen:**
@@ -130,7 +130,7 @@ Falls du das Projekt ohne Docker direkt in einer Python-Umgebung ausführen möc
 
 ### 1. Repository klonen & öffnen
 ```bash
-git clone https://github.com/nilsee/literotica-scraper.git
+git clone https://github.com/nilsee1/literotica-scraper.git
 cd literotica-scraper
 ```
 
