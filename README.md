@@ -75,7 +75,7 @@ Auf deinem Server benötigst du lediglich eine [`docker-compose.yml`](docker-com
 ```yaml
 services:
   literotica-scraper:
-    image: codeberg.org/nilsee/literotica-scraper:latest
+    image: ghcr.io/nilsee/literotica-scraper:latest
     container_name: literotica-scraper
     restart: unless-stopped
     ports:
@@ -84,34 +84,35 @@ services:
 
 Starte und aktualisiere den Container einfach mit:
 ```bash
-# Neuestes Image von Codeberg herunterladen & starten
+# Neuestes Image von GitHub Container Registry herunterladen & starten
 docker compose pull
 docker compose up -d
 ```
 
 ### Variante B: Aus dem geklonten Repository starten
 ```bash
-git clone https://codeberg.org/nilsee/literotica-scraper.git
+git clone https://github.com/nilsee/literotica-scraper.git
 cd literotica-scraper
 
 # Container im Hintergrund bauen und starten
 docker compose up -d --build
 ```
 
-### 📦 Image auf Codeberg bereitstellen / aktualisieren
+### 📦 Image auf GitHub Container Registry (GHCR) bereitstellen / aktualisieren
 Um das Docker-Image für `docker compose pull` auf externen Servern bereitzustellen:
 
-1. **Einmalig bei der Codeberg Registry anmelden:**
-   *(Benötigt ein Personal Access Token unter Codeberg > Einstellungen > Anwendungen mit `write:package`-Berechtigung)*
+1. **Einmalig bei GitHub Packages / GHCR anmelden:**
+   *(Benötigt ein Personal Access Token (classic) unter GitHub > Settings > Developer settings > Personal access tokens mit `write:packages`-Berechtigung)*
    ```bash
-   docker login codeberg.org
+   echo $CR_PAT | docker login ghcr.io -u nilsee --password-stdin
    ```
 
-2. **Image bauen und zu Codeberg pushen:**
+2. **Image bauen und zu GHCR pushen:**
    ```bash
    docker compose build
    docker compose push
    ```
+   *(Alternativ wird das Image bei jedem Push auf den `main`-Branch automatisch via GitHub Actions gebaut und zu GHCR gepusht.)*
 
 ### Nützliche Docker-Befehle:
 * **Status prüfen:** `docker compose ps`
@@ -129,7 +130,7 @@ Falls du das Projekt ohne Docker direkt in einer Python-Umgebung ausführen möc
 
 ### 1. Repository klonen & öffnen
 ```bash
-git clone https://codeberg.org/nilsee/literotica-scraper.git
+git clone https://github.com/nilsee/literotica-scraper.git
 cd literotica-scraper
 ```
 

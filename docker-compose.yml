@@ -1,6 +1,6 @@
 services:
   literotica-scraper:
-    image: codeberg.org/nilsee/literotica-scraper:latest
+    image: ghcr.io/nilsee/literotica-scraper:latest
     build: .
     container_name: literotica-scraper
     restart: unless-stopped
